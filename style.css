@@ -1,0 +1,168 @@
+/* Getting rid of default margins & paddings */
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+
+/* Hashtag Plot */
+
+#hashtag-plot {
+	background: url('./media/hashtagVolume.png'); /* screenshot from twitter's site */
+	background-size: contain; /* Auto-scaling the image to fit in the div */
+
+	width: 1280px;
+	height: 300px;
+
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 1em;
+}
+
+#scrub-bar {
+	position: relative;
+	left: 0;
+	visibility: visible; /* We hide it so that it doesn't show up by default */
+	width: 2px;
+	height: 100%;
+	background-color: red;
+}
+
+
+#container {
+	width: 1280px;
+
+	margin-left: auto;
+	margin-right: auto;
+
+	overflow: hidden;
+}
+
+.panel {
+	float:left;
+	height: 350px;
+}
+
+
+/* Left Panel */
+
+#left {
+	width: 43%;
+}
+
+#sotu-video {
+	width: 100%;
+}
+
+nav {
+	width: 100%	;
+	
+	margin-top: 1em;
+}
+
+nav ol {
+	text-align: center;
+
+	list-style-type: none; /* Getting rid of the typical bullets */
+
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	display: inline;
+
+	border-right: 1px #555 solid;
+
+	padding-right: 0.45em;
+	padding-left: 0.1875em;
+
+	text-transform: uppercase;
+	font-family: Courier, serif;
+	font-size: 0.9655em;
+}
+
+nav li:last-child {
+	border-right: none; /* Removing the border that creates the divider on the last hashtag element */
+}
+
+li a {
+	text-decoration: none; /* Removing the defaul styling of links (i.e. underling) */
+}
+
+
+/* Middle Panel */
+
+#middle {
+	width: 37%;
+}
+
+#sotu-transcript {
+	font-family: 'Crimson Text', serif;
+
+	overflow-y: auto;
+
+	height: 340px;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+
+/* Right Panel */
+
+#right {
+	width: 20%;
+}
+
+#map {
+	height: 50%;
+}
+
+#map object {
+	-webkit-transform: scale(0.2875); /* Scaling down the original SVG */
+	-webkit-transform-origin: 0 0; /* Changing where it's scaled from to the origin instead of the center */
+
+	transform: scale(0.2875);
+	transform-origin: 0 0;
+}
+
+#hashtag-chart ol {
+	padding: 0;
+	padding-left: 0.125em;
+
+	margin: 0.25em;
+	margin-top: 1.25em;
+
+	list-style-type: none;
+}
+
+#hashtag-chart li {
+	height: 1em;
+	width: 100%;
+
+	margin: 0;
+	margin-bottom: 0.625em;
+}
+
+#hashtag-chart li .hashtag {
+	float: left;
+	width: 25%;
+
+	text-transform: uppercase;
+	font-family: Courier, serif;
+	font-size: 0.75em;
+	line-height: calc(0.75em * 2.166);
+	
+	-webkit-transition: 250ms linear;
+	transition: 250ms linear;
+}
+
+#hashtag-chart li .bar {
+	height: 1.25em;
+	width: 65%;
+
+	float: right;
+	
+	-webkit-transition: 250ms linear;
+	transition: 250ms linear;
+}
